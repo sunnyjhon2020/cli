@@ -1,0 +1,22 @@
+{
+  "name": "fyle-build",
+  "version": "1.0.0",
+  "description": "command line to build app locally",
+  "main": "index.js",
+  "bin": {
+    "fyle-build": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "inquirer": "^7.0.0",
+    "node-cmd": "^3.0.0",
+    "os": "^0.1.1",
+    "through": "^2.3.8"
+  }
+}
