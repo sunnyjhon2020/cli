@@ -1,5 +1,4 @@
 var exec = require('child_process').exec;
-var through = require('through');
 var os = require('os');
 var child;
 

@@ -24,7 +24,7 @@ program
               newTerminal.open('cd fyle-app && source setup.sh && cd router && gulp && gulp watch', () => {
                 newTerminal.open('cd fyle-sharedjs && bash run.sh', () => {
                   newTerminal.open('cd fyle-sharedjs && gulp watch', () => {
-                    console.log("App build started");
+                    console.log(chalk.green('App build started'));
                   })
                 })
               })
@@ -37,7 +37,7 @@ program
 
 program
   .command('staging-to-root')
-  .alias('s-to-r')
+  .alias('s2r')
   .description(chalk.red('will change endpoint\'s staging to ROOT'))
   .action(() => {
     end_points.files.forEach((file) => {
@@ -66,7 +66,7 @@ program
 
 program
   .command('root-to-staging')
-  .alias('r-to-s')
+  .alias('r2s')
   .description(chalk.red('will change endpoint\'s ROOT to staging'))
   .action(() => {
     end_points.files.forEach((file) => {
