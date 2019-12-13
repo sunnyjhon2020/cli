@@ -2,8 +2,6 @@ var exec = require('child_process').exec;
 var os = require('os');
 var child;
 
-var args = process.argv;
-
  function openTab(cmd, cb) {
   if (os.platform() !== 'darwin') {
     throw new Error('No support for this operating system but feel free to fork the repo and add it :)');
@@ -16,7 +14,7 @@ var args = process.argv;
            '"', cmd, '"',
            'in selected tab of the front window\''].join('');
 
-  child = exec(open, function(error, stdout, stderr) {
+  child = exec(open, function(error) {
     if (error) {
       throw error;
     }

@@ -9,7 +9,7 @@ const countLogger = require('./change_count_log');
 
 program
   .version('1.0.0')
-  .description(chalk.greenBright('one stop solution to build the fyle app'));
+  .description(chalk.greenBright('command line tool to build the fyle app'));
 
 program 
   .command('app')
@@ -25,12 +25,12 @@ program
                 newTerminal.open('cd fyle-sharedjs && bash run.sh', () => {
                   newTerminal.open('cd fyle-sharedjs && gulp watch', () => {
                     console.log(chalk.green('App build started'));
-                  })
-                })
-              })
-            })
-          })
-        })
+                  });
+                });
+              });
+            });
+          });
+        });
       });
     });
   });
